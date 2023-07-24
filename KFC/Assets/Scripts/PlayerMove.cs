@@ -1,18 +1,55 @@
+/*
+ * Author: Tanucan Cliford Baguio
+ * Date: 24/07/2023
+ * Description: Player Movement
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Movement")]
+    public float moveSpeed = 6f;
+    float movementMultiplier = 10f;
+    float rbDrag = 6f;
+    float horizontalMovement;
+    float verticalMovement;
+    Vector3 moveDirection;
+    Rigidbody rb;
+
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true; //rigid body does not rotate when hitting another game object
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        myInput();
+        ControlDrag();
+    }
+
+    void myInput()
+    {
+        horizontalMovement = Input.GetAxisRaw("Horizontal");
+        verticalMovement = Input.GetAxisRaw("Vertical");
+
+        moveDirection = transform.forward * verticalMovement + transform.right * horizontalMovement; //move in direction relative to where player is looking
+    }
+
+    void ControlDrag()
+    {
+        rb.drag = rbDrag;
+    }
+
+    private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
+    void MovePlayer()
+    {
+        rb.AddForce(moveDirection.normalized * moveSpeed * movementMultiplier , ForceMode.Acceleration); //move speed remain constant when W + A/ W + D etc. keys are pressed
     }
 }
