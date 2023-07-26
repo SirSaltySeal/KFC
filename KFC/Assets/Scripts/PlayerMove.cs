@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 6f;
     float movementMultiplier = 10f;
-    float sprintMultiplier = 20f;
+    float sprintMultiplier = 12f;
     float rbDrag = 6f;
     float horizontalMovement;
     float verticalMovement;

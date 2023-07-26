@@ -1,7 +1,7 @@
 /*
  * Author: Tanucan Cliford Baguio
  * Date: 24/07/2023
- * Description: Player Movement
+ * Description: Player Look
  */
 using System.Collections;
 using System.Collections.Generic;
