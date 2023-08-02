@@ -1,3 +1,8 @@
+/*
+ * Author: Tanucan Cliford Baguio
+ * Date: 26/07/2023
+ * Description: Muzzle Fire and Damage
+ */
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -23,13 +28,11 @@ public class Gun : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            shoot();
-
+            Shoot();
         }
     }
 
-    void shoot()
+    void Shoot()
     {
 
         muzzleFlash.Play();

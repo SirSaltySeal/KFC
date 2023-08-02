@@ -1,3 +1,8 @@
+/*
+ * Author: Tanucan Cliford Baguio
+ * Date: 2/08/2023
+ * Description: Enemy Health
+ */
 using UnityEngine;
 
 public class Target : MonoBehaviour
