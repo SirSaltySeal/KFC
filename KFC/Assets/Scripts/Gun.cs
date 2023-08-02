@@ -1,6 +1,6 @@
 /*
  * Author: Tanucan Cliford Baguio
- * Date: 26/07/2023
+ * Date: 2/08/2023
  * Description: Muzzle Fire and Damage
  */
 using UnityEngine;
@@ -15,7 +15,7 @@ public class Gun : MonoBehaviour
     public VisualEffect muzzleFlash;
     private object hit;
     public GameObject impactEffect;
-    public float impactForce = 30f;
+    public float impactForce = 50f;
     private float nextTimeToFire = 0f;
 
 
