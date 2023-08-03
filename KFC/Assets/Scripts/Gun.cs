@@ -18,11 +18,6 @@ public class Gun : MonoBehaviour
     public float impactForce = 50f;
     private float nextTimeToFire = 0f;
 
-
-
-
-
-
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +25,11 @@ public class Gun : MonoBehaviour
         {
             Shoot();
         }
+        //nexttimetofire += time.deltatime;
+        //if (nexttimetofire > 1f)
+        //{
+        //    nexttimetofire -= 1f;
+        //}
     }
 
     void Shoot()
