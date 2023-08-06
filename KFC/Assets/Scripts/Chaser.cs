@@ -21,6 +21,14 @@ public class Chaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agentComponent.SetDestination(chasePlayer.position);
+        if (chasePlayer != null)
+        {
+            agentComponent.SetDestination(chasePlayer.position);
+        }
+    }
+
+    public void SetThingToChase(Transform thingToSet)
+    {
+        chasePlayer = thingToSet;
     }
 }
