@@ -8,7 +8,8 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float health = 100f;
-    
+    public int ID { get;set; }
+
     public void TakeDamage(float amount)
     {
         health -= amount;
