@@ -10,4 +10,12 @@ public class Quests
     public string title;
     public string description;
 
+    public QuestGoal goal;
+
+    public void Complete()
+    {
+        isActive = false;
+        Debug.Log("Quest Complete");
+    }
+
 }

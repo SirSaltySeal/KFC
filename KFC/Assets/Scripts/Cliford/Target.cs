@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public Quests quest;
     public float health = 100f;
     public int ID { get;set; }
 
@@ -22,5 +23,13 @@ public class Target : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        if(quest.isActive)
+        {
+            quest.goal.EnemyKilled();
+            if (quest.goal.IsReached())
+            {
+                quest.Complete();
+            }
+        }
     }
 }
