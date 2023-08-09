@@ -25,9 +25,8 @@ public class PlayerLook : MonoBehaviour
     private void Start()
     {
         cam = GetComponentInChildren<Camera>();
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     private void Update()

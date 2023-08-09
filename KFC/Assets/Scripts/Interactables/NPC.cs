@@ -9,6 +9,7 @@ public class NPC : Interactable
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
     public GameObject questWindow;
+    public PlayerMove player;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +28,12 @@ public class NPC : Interactable
         questWindow.SetActive(true);
         titleText.text = quest.title;
         descriptionText.text = quest.description;
+    }
+
+    public void AcceptQuest()
+    {
+        questWindow.SetActive(false);
+        quest.isActive = true;
+        player.quest = quest;
     }
 }
