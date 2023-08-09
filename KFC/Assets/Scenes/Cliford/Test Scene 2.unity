@@ -4881,7 +4881,7 @@ MonoBehaviour:
       goalType: 0
       requiredAmount: 0
       currentAmount: 0
-  health: 10
+  health: 20
 --- !u!1 &1627253304
 GameObject:
   m_ObjectHideFlags: 0
