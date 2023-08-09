@@ -5,9 +5,8 @@
  */
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class RangedHP : MonoBehaviour
 {
-    public Quests quest;
     public float health = 100f;
 
     public void TakeDamage(float amount)
@@ -22,13 +21,5 @@ public class Target : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
-        if(quest.isActive)
-        {
-            quest.goal.EnemyKilled();
-            if (quest.goal.IsReached())
-            {
-                quest.Complete();
-            }
-        }
     }
 }

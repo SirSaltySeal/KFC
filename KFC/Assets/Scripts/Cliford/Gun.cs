@@ -26,11 +26,6 @@ public class Gun : MonoBehaviour
             nextTimeToFire = Time.time + 1f/fireRate;
             Shoot();
         }
-        //nexttimetofire += time.deltatime;
-        //if (nexttimetofire > 1f)
-        //{
-        //    nexttimetofire -= 1f;
-        //}
     }
 
     void Shoot()
