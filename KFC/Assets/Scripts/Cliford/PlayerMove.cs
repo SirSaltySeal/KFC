@@ -20,7 +20,6 @@ public class PlayerMove : MonoBehaviour
     Rigidbody rb;
     public bool isMoving = false;
 
-    public Quests quest;
 
     private void Start()
     {

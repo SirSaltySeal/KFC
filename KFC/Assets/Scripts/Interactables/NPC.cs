@@ -9,7 +9,7 @@ public class NPC : Interactable
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
     public GameObject questWindow;
-    public PlayerMove player;
+    public Player player;
 
     // Start is called before the first frame update
     void Start()

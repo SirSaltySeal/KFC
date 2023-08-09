@@ -847,6 +847,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player w VFX
       objectReference: {fileID: 0}
+    - target: {fileID: 6797559271360658011, guid: 12fc4da6519a3dd45aa9a2c961286166,
+        type: 3}
+      propertyPath: quest.isActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6797559271360658013, guid: 12fc4da6519a3dd45aa9a2c961286166,
         type: 3}
       propertyPath: m_RootOrder
@@ -1123,7 +1128,7 @@ MonoBehaviour:
   quest:
     isActive: 0
     title: Kill Quest
-    description: Exorcise 10 Foul Beings
+    description: Exorcise 1 Foul Being
   titleText: {fileID: 1993337984}
   descriptionText: {fileID: 162608648}
   questWindow: {fileID: 1257794282}
@@ -1984,6 +1989,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3b2eeabbaf23244b28a41b86c70b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1344510330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344510313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e2f941b9c416f4d9dc9cd504f0fda2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest:
+    isActive: 0
+    title: 
+    description: 
 --- !u!1 &1612771172
 GameObject:
   m_ObjectHideFlags: 0
