@@ -809,5 +809,6 @@ MonoBehaviour:
   fireRate: 1
   fpsCam: {fileID: 6889728474293514143}
   muzzleFlash: {fileID: 3368328612369550926}
-  impactEffect: {fileID: 0}
+  impactEffect: {fileID: 7643053069413979119, guid: 564adbd78eba9f44c81fc6cd79dbe443,
+    type: 3}
   impactForce: 40
