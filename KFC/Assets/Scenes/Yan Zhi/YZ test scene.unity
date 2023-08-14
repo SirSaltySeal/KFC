@@ -607,6 +607,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0fa31be2d7f564282c84cc997bbac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest:
+    isActive: 0
+    title: 
+    description: 
+    goal:
+      goalType: 0
+      requiredAmount: 0
+      currentAmount: 0
   health: 100
 --- !u!1 &1045814005
 GameObject:
