@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class RangedEnemyAI : MonoBehaviour
 {
+    public float Damage;
+
     public NavMeshAgent agent;
 
     public Transform player;
@@ -103,4 +105,12 @@ public class RangedEnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+            collision.collider.gameObject.GetComponent<PlayerHealth>().playerTakeDamage(Damage);
+            Debug.Log(gameObject);
+        }
+    }
 }
