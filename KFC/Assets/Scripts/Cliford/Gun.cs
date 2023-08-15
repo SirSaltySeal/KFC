@@ -17,6 +17,7 @@ public class Gun : MonoBehaviour
     public GameObject impactEffect;
     public float impactForce = 50f;
     private float nextTimeToFire = 0f;
+    public GameObject Forsaken;
 
     // Update is called once per frame
     void Update()
@@ -39,16 +40,25 @@ public class Gun : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
             Target target = hit.transform.GetComponent<Target>();
+
             if (target != null)
             {
                target.TakeDamage(damage);
             }
 
-
             if (hit.rigidbody != null)
             {
 
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
+
+            }
+
+            if (hit.rigidbody == Forsaken.GetComponent<Rigidbody>())
+            {
+
+                hit.rigidbody.AddForce(-hit.normal * 20 * impactForce);
+                
+                Debug.Log("Lit");
 
             }
 
@@ -58,4 +68,5 @@ public class Gun : MonoBehaviour
         GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(impactGO, 2f);
     }
+
 }
