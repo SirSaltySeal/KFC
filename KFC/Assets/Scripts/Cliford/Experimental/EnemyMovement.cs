@@ -6,6 +6,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyMovement : MonoBehaviour
 {
+    public float Damage;
     public Transform Target;
     public float UpdateSpeed = 0.1f;
 
@@ -36,5 +37,14 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "Player")
+        {
+            collision.collider.gameObject.GetComponent<PlayerHealth>().playerTakeDamage(Damage);
+            Debug.Log(gameObject);
+        }
     }
 }
