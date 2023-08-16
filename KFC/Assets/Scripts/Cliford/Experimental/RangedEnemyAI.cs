@@ -29,7 +29,7 @@ public class RangedEnemyAI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Updated Player").transform;
+        player = GameObject.Find("2").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 

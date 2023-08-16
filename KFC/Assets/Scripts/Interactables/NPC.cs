@@ -37,6 +37,6 @@ public class NPC : Interactable
         questWindow.SetActive(false);
         questStatus.SetActive(true);
         quest.isActive = true;
-        killCounter.text = "Enemies Exorcised: " + script.score;
+        killCounter.text = "Kill All Enemies";
     }
 }
