@@ -8,13 +8,15 @@ public class NPC : Interactable
     public Quests quest;
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
-    public GameObject questWindow;
-    public Player player;
+    public GameObject questWindow; 
+    public GameObject questStatus;
+    Target script;
+    public TextMeshProUGUI killCounter;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        script = FindObjectOfType<Target>();
     }
 
     // Update is called once per frame
@@ -33,7 +35,8 @@ public class NPC : Interactable
     public void AcceptQuest()
     {
         questWindow.SetActive(false);
+        questStatus.SetActive(true);
         quest.isActive = true;
-        player.quest = quest;
+        killCounter.text = "Enemies Exorcised: " + script.score;
     }
 }
