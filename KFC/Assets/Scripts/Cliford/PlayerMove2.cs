@@ -22,6 +22,7 @@ public class PlayerMove2 : MonoBehaviour
     public bool isMoving = false;
     public TextMeshProUGUI killCounter;
     Target script;
+    public GameObject MissionComplete;
 
 
     private void Start()
@@ -38,7 +39,7 @@ public class PlayerMove2 : MonoBehaviour
         killCounter.text = "Kill All Enemies";
         if(script.score == 1 )
         {
-            Destroy(gameObject);
+           MissionComplete.SetActive(true);
         }
     }
 
