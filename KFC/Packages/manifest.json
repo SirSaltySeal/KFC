@@ -1,10 +1,18 @@
 {
   "dependencies": {
+    "com.unity.ai.navigation": "1.0.0-exp.4",
     "com.unity.collab-proxy": "2.0.4",
     "com.unity.ide.rider": "3.0.21",
     "com.unity.ide.visualstudio": "2.0.18",
     "com.unity.ide.vscode": "1.2.5",
+<<<<<<< HEAD
     "com.unity.render-pipelines.universal": "10.8.1",
+=======
+    "com.unity.inputsystem": "1.5.1",
+    "com.unity.probuilder": "5.0.7",
+    "com.unity.progrids": "3.0.3-preview.6",
+    "com.unity.render-pipelines.universal": "12.1.11",
+>>>>>>> 7a8a9021e676692b42d30b14df6045552b88865f
     "com.unity.test-framework": "1.1.33",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.6.5",
