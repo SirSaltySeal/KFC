@@ -19,6 +19,12 @@ public class PlayerMove : MonoBehaviour
     Vector3 moveDirection;
     Rigidbody rb;
     public bool isMoving = false;
+<<<<<<< HEAD:KFC/Assets/Scripts/PlayerMove.cs
+=======
+    public TextMeshProUGUI killCounter;
+    Target script;
+
+>>>>>>> parent of 7a8a902 (added death scene):KFC/Assets/Scripts/Cliford/PlayerMove2.cs
 
     private void Start()
     {
@@ -30,7 +36,15 @@ public class PlayerMove : MonoBehaviour
     {
         myInput();
         ControlDrag();
+<<<<<<< HEAD:KFC/Assets/Scripts/PlayerMove.cs
       
+=======
+        killCounter.text = "Kill All Enemies";
+        if(script.score == 1 )
+        {
+            Destroy(gameObject);
+        }
+>>>>>>> parent of 7a8a902 (added death scene):KFC/Assets/Scripts/Cliford/PlayerMove2.cs
     }
 
     void myInput()
